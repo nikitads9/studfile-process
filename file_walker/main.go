@@ -48,7 +48,7 @@ func walkFunc(path string, info os.FileInfo, err error) error {
 		docx1.Replace(old, new, -1)
 	}
 
-	if strings.Contains(path, "Основы Программирования") || strings.Contains(path, "Информатика") {
+	if strings.Contains(strings.ToLower(path), "основы программирования") || strings.Contains(strings.ToLower(path), "информатика") {
 		for imageIndex := 1; imageIndex <= docx1.ImagesLen(); imageIndex++ {
 			docx1.ReplaceImage("word/media/image"+strconv.Itoa(imageIndex)+".png", "../assets/гуриков.png")
 			docx1.ReplaceImage("word/media/image"+strconv.Itoa(imageIndex)+".jpg", "../assets/гуриков.jpg")
