@@ -50,8 +50,8 @@ func walkFunc(path string, info os.FileInfo, err error) error {
 
 	if strings.Contains(path, "Основы Программирования") || strings.Contains(path, "Информатика") {
 		for imageIndex := 1; imageIndex <= docx1.ImagesLen(); imageIndex++ {
-			docx1.ReplaceImage("word/media/image"+strconv.Itoa(imageIndex)+".png", "./гуриков.png")
-			docx1.ReplaceImage("word/media/image"+strconv.Itoa(imageIndex)+".jpg", "./гуриков.jpg")
+			docx1.ReplaceImage("word/media/image"+strconv.Itoa(imageIndex)+".png", "../assets/гуриков.png")
+			docx1.ReplaceImage("word/media/image"+strconv.Itoa(imageIndex)+".jpg", "../assets/гуриков.jpg")
 		}
 	}
 
